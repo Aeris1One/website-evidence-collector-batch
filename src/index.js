@@ -35,7 +35,7 @@ const validateConfig = async (config) => {
     dnt: Joi.boolean(),
     firstPartyUri: Joi.string().uri().required(),
     testssl: Joi.boolean(),
-    testsslExecutable: Joi.string().uri({relativeOnly: true})
+    testsslExecutable: Joi.string().uri({relativeOnly: true}),
     setCookie: Joi.string(),
     urls: Joi.array().items(Joi.string().uri().required()),
     sitemaps: Joi.array().items(Joi.object().keys({
